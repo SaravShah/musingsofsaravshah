@@ -1,0 +1,14 @@
+<% provide(:author, 'active') %>
+
+<div>
+	<td> <%= link_to 'Edit', edit_author_post_path(@post) %> </td>
+	<td>  <%= link_to 'Remove', author_post_path(@post), method: :delete, data: { confirm: "Are you sure?"} %> </td>
+</div>
+
+<div class="row">
+	<div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-xs-center">
+		<h1> <%= @post.title %> </h1> 
+		<p> <%= @post.display_day_published %> </p>
+		<%= @post.body %>
+	</div>
+</div>

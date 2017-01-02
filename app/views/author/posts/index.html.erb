@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+	<div>
+		<%= link_to 'New Post', new_author_post_path %>
+	</div>
+	<br>
+	<table class="table table-striped">
+		<tr>
+			<th colspan='4'> Title </th>
+		</tr>
+	  <% @posts.each do |post| %>
+	    <%= render post %>
+	  <% end %>
+	</table>
+
+
+
+</div>
