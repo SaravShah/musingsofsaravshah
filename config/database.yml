@@ -1,25 +1,15 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
-default: &default
-  adapter: sqlite3
-  pool: 5
-  timeout: 5000
-
-development:
-  <<: *default
-  database: db/development.sqlite3
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
-
-production:
-  <<: *default
-  database: db/production.sqlite3
+{
+			clientToken: 'pub5876b7c09839ad3b8e73e96ad0d38588',
+			applicationId: 'e03701b7-d955-4ca2-a121-e7f5d505b2e7',
+			site: 'datadoghq.com',
+			sessionSampleRate: 100,
+			trackUserInteractions: true,
+			service: 'shopist-web-ui',
+			version: rumVersion,
+			env: 'prod',
+			allowedTracingUrls: [process.env.shopistApiUrl],
+			startSessionReplayRecordingManually: true,
+			sessionReplaySampleRate: 100,
+			allowUntrustedEvents: true,
+			defaultPrivacyLevel: 'mask-user-input'
+			}
